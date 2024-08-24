@@ -1,0 +1,116 @@
+{% extends "flights/base.html" %}
+
+    {% block head %} 
+    <style>
+        .links1 {
+            margin-bottom: 5px;
+        }
+        .links1 a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+            color: black;
+            padding-right: 20px;
+        }
+        
+        #flexbox {
+            display: flex;
+            width: 100%;
+        }
+        
+        .links1 {
+            flex: 1;
+        }
+        .form-container1 {
+            margin-top: 3%;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding: 3px;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+        }
+        
+        #first-part-form-conainer {
+            text-align: center;
+            border-radius: 20px;
+            background-color: burlywood;
+        }
+        #second-part-form-container{
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    {% endblock %}
+
+    {% block div %}
+    <hr>
+    <div id="flexbox">
+        <div class="links1">
+            <a href="#">Book</a>
+            <a href="#">Flights</a>
+            <a href="#">Airlines</a>
+            <a href="#">Help</a>
+            <a href="#">About</a>
+        </div>
+
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+            <input type="button" value="⌕">
+        </div>
+    </div>
+    {% endblock %}
+    
+    
+    {% block content %}    
+    <div class="form-container1">
+
+        <div id="first-part-form-conainer">
+            <input type="radio" style="height: 20px;width: 20px;" id="one_way_radio" onclick="One_way_Div();" />
+            <label style="font-size: x-large;"> One-way</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" style="height: 20px;width: 20px;" id="two_way_radio" onclick="two_way_Div();" />
+            <label style="font-size: x-large;"> Round-trip </label>
+         </div>
+        
+        <div id="second-part-form-container">
+            <div id="one_way" style="display: block;">
+                <hr>
+                <form>
+                    <label>From:</label>
+                    <input list="airports" name="starting" id="starting" placeholder="Starting">
+                    <label>To:</label>
+                    <input list="airports" name="destination" id="destination" placeholder="Destination">
+                    <datalist id="airports">
+                        <option value="Edge">
+                    </datalist>
+                    <br>
+                    <input type="date">
+                    <br>
+                    <br>
+                    <button class="btn btn-dark">Find</button>
+                </form>
+            </div>
+            <div id="two_way" style="display: none;">
+                <hr>
+                <form>
+                    <label>From:</label>
+                    <input list="airports" name="starting" id="starting" placeholder="Starting">
+                    <label>To:</label>
+                    <input list="airports" name="destination" id="destination" placeholder="Destination">
+                    <datalist id="airports">
+                        <option value="Edge">
+                    </datalist>
+                    <br>
+                    <label>Departure</label>
+                    <input type="date">
+                    <label style="padding-right: 1px;">Return</label>
+                    <input type="date">
+                    <br>
+                    <br>
+                    <button class="btn btn-dark">Find</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+    

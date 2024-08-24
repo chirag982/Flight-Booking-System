@@ -1,0 +1,52 @@
+{% extends "flights/base.html" %}
+
+{% block head %} 
+<style>
+    .form-container1 {
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 3px;
+        border-radius: 20px;
+        background-color: white;
+        color: black;
+    }
+    
+    #first-part-form-conainer {
+        text-align: center;
+        border-radius: 20px;
+        background-color: burlywood;
+    }
+    #second-part-form-container{
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="form-container1">
+
+    <div id="first-part-form-conainer">
+        <label style="font-size: x-large;">Login</label>
+     </div>
+    
+    <div id="second-part-form-container">
+        <form>
+            <br>
+            <input type="text" placeholder="Email">
+            <br>
+            <br>
+            <input type="text" placeholder="Password">
+            <hr>
+            <button class="btn btn-dark">Sumbit</button>
+            <br>
+            <label>Not having an account?</label><a href="{% url 'signup' %}">SignUp</a>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
+
+
