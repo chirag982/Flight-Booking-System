@@ -1,5 +1,9 @@
 {% extends "flights/base.html" %} {% block head %}
 <style>
+    h3 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
     .links1 {
         margin-bottom: 5px;
     }
@@ -62,9 +66,35 @@
         display: flex;
         justify-content: space-between;
     }
+    
+    #questions-div {
+        border-radius: 10px;
+        padding: 5px;
+        background-color: white;
+        color: black;
+    }
+    
+    #questions-div div {
+        padding-left: 10px;
+    }
+    
+    #about_us {
+        text-align: center;
+        color: gray;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    #about_us h3 {
+        color: black;
+    }
+    
+    #button-top {
+        float: right;
+    }
 </style>
 {% endblock %} {% block div %}
-<hr>
+
+
 <div id="flexbox">
     <div class="links1">
         <a href="#">Book</a>
@@ -76,7 +106,7 @@
 
     <div id="search-bar">
         <input type="text" placeholder="Search">
-        <input type="button" value="⌕">
+        <input type="submit" value="⌕">
     </div>
 </div>
 {% endblock %} {% block content %}
@@ -131,17 +161,50 @@
 
 </div>
 {% load static %}
-<div id="airlines-div">
-    <h3>Popular domestic flights</h3>
-    <hr>
-    <div id="airline-image-div">
-        <a href="#"><img id="image1" src="{% static 'images/indigo.png' %}" alt="IndiGo"></a>
-        <a href="#"><img id="image2" src="{% static 'images/airindia.png' %}" alt="Air India"></a>
-        <a href="#"><img id="image2" src="{% static 'images/airindiaexpress.webp' %}" alt="Air India Express"></a>
-        <a href="#"><img id="image2" src="{% static 'images/akasaair.png' %}" alt="Akasa Air"></a>
-        <a href="#"><img id="image2" src="{% static 'images/vistara.png' %}" alt="Vistara"></a>
-        <a href="#"><img id="image2" src="{% static 'images/spicejet.png' %}" alt="SpiceJet"></a>
+<div id="footer">
+
+
+    <div id="airlines-div">
+        <h3>Popular Flights</h3>
+        <div id="airline-image-div">
+            <a href="#"><img id="image1" src="{% static 'images/indigo.png' %}" alt="IndiGo"></a>
+            <a href="#"><img id="image2" src="{% static 'images/airindia.png' %}" alt="Air India"></a>
+            <a href="#"><img id="image2" src="{% static 'images/airindiaexpress.webp' %}" alt="Air India Express"></a>
+            <a href="#"><img id="image2" src="{% static 'images/akasaair.png' %}" alt="Akasa Air"></a>
+            <a href="#"><img id="image2" src="{% static 'images/vistara.png' %}" alt="Vistara"></a>
+            <a href="#"><img id="image2" src="{% static 'images/spicejet.png' %}" alt="SpiceJet"></a>
+        </div>
     </div>
+
+    <div id="questions-div">
+        <h3>Frequently Asked Questions</h3>
+        <hr>
+        <div>
+            <b>How do I book cheap flight Tickets</b>
+            <br>
+            <p>Here's how you can book cheap flight tickets</p>
+            <ul>
+                <li>Book your flights from ixigo in advance to get the cheapest deals.</li>
+                <li>Be flexible, and consider flying during off-peak hours to get cheaper flight tickets.</li>
+                <li>ixigo's fare alerts feature sends you notifications when the air ticket price on your route gets cheap.</li>
+                <li>If you have time, try stopover flights as flights with multiple stops are often cheaper.</li>
+                <li>Avoid traveling on weekends, as air tickets are usually higher during this time.</li>
+                <li>Try budget airlines like Indigo, Air India to book cheap flight tickets.</li>
+            </ul>
+        </div>
+        <div>
+            <b>How is this working?</b>
+            <br>
+            <p>Because it is made by chirag</p>
+        </div>
+    </div>
+    <div id="about_us">
+        <h3>About us</h3>
+        <i><p>This is a Flight booking demo app with the functionality of virtual flight booking giving vibe of real booking of the flight as in ixigo, makemytrip etc. <br>Built by me i.e. chirag, used datbase , user authentication and two database models.</p></i>
+        <p style="font-size: small;">All rights reserved</p>
+
+    </div>
+
 </div>
 
 {% endblock %}

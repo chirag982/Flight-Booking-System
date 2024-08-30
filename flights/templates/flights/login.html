@@ -1,6 +1,4 @@
-{% extends "flights/base.html" %}
-
-{% block head %} 
+{% extends "flights/base.html" %} {% block head %}
 <style>
     .form-container1 {
         margin-top: 3%;
@@ -17,25 +15,23 @@
         border-radius: 20px;
         background-color: burlywood;
     }
-    #second-part-form-container{
+    
+    #second-part-form-container {
         padding: 5px;
         text-align: center;
     }
 </style>
-{% endblock %}
-
-
-{% block content %}
+{% endblock %} {% block content %}
 <div class="form-container1">
 
     <div id="first-part-form-conainer">
         <label style="font-size: x-large;">Login</label>
-     </div>
-    
+    </div>
+
     <div id="second-part-form-container">
         <form>
             <br>
-            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Email/username">
             <br>
             <br>
             <input type="text" placeholder="Password">
@@ -48,5 +44,3 @@
 
 </div>
 {% endblock %}
-
-
