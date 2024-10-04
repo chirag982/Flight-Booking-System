@@ -11,7 +11,7 @@
     <style>
         body {
             background-image: url("{% static 'images/travel.jpg' %}");
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-size: 100% auto;
         }
         
@@ -42,19 +42,6 @@
 
     {% block content %} {% endblock %}
 
-    <script>
-        document.getElementById("one_way_radio").checked = true;
-        function One_way_Div() {
-            document.getElementById("one_way").style.display = "block";
-            document.getElementById("two_way").style.display = "none";
-            document.getElementById("two_way_radio").checked = false;
-        }
-        function two_way_Div() {
-            document.getElementById("one_way").style.display = "none";
-            document.getElementById("two_way").style.display = "block";
-            document.getElementById("one_way_radio").checked = false;
-        }
-    </script>
 </body>
 
 </html>

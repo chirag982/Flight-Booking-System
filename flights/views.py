@@ -9,3 +9,6 @@ def login(request):
 
 def signup(request):
     return render(request, "flights/signup.html")
+
+def home(request):
+    return render(request, "flights/home.html")
