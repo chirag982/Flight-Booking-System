@@ -2,8 +2,28 @@
 
 {% block head %} 
 <style>
+    .links1 {
+            margin-bottom: 5px;
+        }
+        .links1 a {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-size: large; */
+            padding-right: 20px;
+        }
+        
+        #flexbox {
+            border-top: 1px solid gray;
+            background-color: white;
+            padding: 5px;
+            display: flex;
+            width: 100%;
+        }
+        
+        .links1 {
+            flex: 1;
+        }
     #big-container {
-        margin-top: 5%;
+        margin-top: 3%;
         margin-left: 2%;
         margin-right: 2%;
     }
@@ -36,11 +56,28 @@
 </style>
 {% endblock %}
 
+{% block div %}
+    <div id="flexbox">
+        <div class="links1">
+            <a href="#" class="btn btn-dark">Book Flight</a>
+            <a href="#" class="btn btn-dark">Check Your Flight</a>
+            <a href="#" class="btn btn-dark">Airlines</a>
+            <a href="#" class="btn btn-dark">Help</a>
+            <a href="#" class="btn btn-dark">About</a>
+        </div>
+
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+            <input type="button" value="⌕">
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
     {% load static %}
 <div id="big-container">
     <div id="heading-big-container">
-        <h1>Most Booked Places around the world</h1>
+        <h1>Most Booked Places around the world!</h1>
     </div>
     <div class="inner-container">
         <image src="{% static 'images/paris.jfif' %}">
